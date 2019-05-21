@@ -9,6 +9,8 @@ module.exports = async (activity) => {
       return;
     }
 
+    if(activity.Request.Data._type == "validate_key") return;
+
     var request = activity.Request.Data;
     var entity = {};
     var collections = [];
