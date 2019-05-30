@@ -1,0 +1,8 @@
+InterfaceName: 'items'
+Description: 'List Of Issues'
+APIDoc: ''
+Interfaces: 'pagination, daterange'
+RequiredScopes: ''
+AdditionalParameters:
+Method: ''
+

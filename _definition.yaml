@@ -9,7 +9,7 @@ ClientSecret: hide
 AccessCodeServiceUrl: hide
 AccessTokenServiceUrl: hide
 Personalized: !!bool true
-ApiKey: hide
+ApiKey: required
 ServiceUrl: hide
 ServiceUrlHint: ''
 XML2JSON: hide
@@ -18,8 +18,8 @@ Interface: hide
 Custom1: optional
 Custom1Label: Webhook Secret Token
 Custom1Hint: ''
-Custom2: hide
-Custom2Label: Custom Field 2
+Custom2: required
+Custom2Label: Endpoint URL
 Custom3: hide
 Custom2Hint: ''
 Custom3Label: Custom Field 3
