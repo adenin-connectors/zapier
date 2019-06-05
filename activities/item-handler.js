@@ -35,7 +35,7 @@ module.exports = async (activity) => {
 
           // case 3: When AssignedTo is not empty and open we return a collection “my”, with only users: AssignedTo
           // if assignedTo is empty we use roles instead
-          if (request.assignedTo.length > 1) {
+          if (request.assignedTo.length > 0) {
             collections.push({ name: "my", users: request.assignedTo, roles: [], date: date });
           } else {
             collections.push({ name: "my", users: [], roles: request.roles, date: date });
