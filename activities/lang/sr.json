@@ -6,6 +6,8 @@
   "You have no issues assigned.": "Nemate dodeljenih problema.",
   "There are {0} open issues." : "Imate {0} otvorenih problema.",
   "There is 1 open issue." : "Imate 1 otvorenih problem.",
-  "There are no open issues." : "Nemate otvorenih problema."
-
+  "There are no open issues." : "Nemate otvorenih problema.",
+  "There are {0} issues." : "Ima {0} problema.",
+  "There is 1 issue." : "Ima 1 problem.",
+  "There are no issues." : "Nema problema."
 }

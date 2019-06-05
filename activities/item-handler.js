@@ -25,12 +25,10 @@ module.exports = async (activity) => {
         link: request.link
       };
 
-
-      if (request.openValue == true) {
-        if (request.assignedTo.length > 0 || request.roles.length > 0) {
-
-          // case 1: A collection "all" is returned with users and roles
-          collections.push({ name: "all", users: request.assignedTo, roles: request.roles, date: date });
+      if (request.assignedTo.length > 0 || request.roles.length > 0) {
+        // case 1: A collection "all" is returned with users and roles
+        collections.push({ name: "all", users: request.assignedTo, roles: request.roles, date: date });
+        if (request.openValue == true) {
 
           // case 2: When open == true we return collection “open”, with users and roles
           collections.push({ name: "open", users: request.assignedTo, roles: request.roles, date: date });
