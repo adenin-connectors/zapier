@@ -1,6 +1,7 @@
 {
   "Open Issues": "Otvoreni Problemi",
   "All Issues": "Svi Problemi",
+  "My Issues": "Moji Problemi",
   "You have {0} assigned issues.": "Imate {0} dodeljena problema.",
   "You have 1 assigned issue.": "Imate 1 dodeljen problem.",
   "You have no issues assigned.": "Nemate dodeljenih problema.",
@@ -9,5 +10,17 @@
   "There are no open issues." : "Nemate otvorenih problema.",
   "There are {0} issues." : "Ima {0} problema.",
   "There is 1 issue." : "Ima 1 problem.",
-  "There are no issues." : "Nema problema."
+  "There are no issues." : "Nema problema.",
+  "Open Tickets": "Otvoreni Tiketi",
+  "All Tickets": "Svi Tiketi",
+  "My Tickets": "Moji Tiketi",
+  "You have {0} assigned tickets.": "Imate {0} dodeljena tiketa.",
+  "You have 1 assigned ticket.": "Imate 1 dodeljen tiket.",
+  "You have no tickets assigned.": "Nemate dodeljenih tiketa.",
+  "There are {0} open tickets." : "Imate {0} otvorenih tiketa.",
+  "There is 1 open ticket." : "Imate 1 otvoreni tiket.",
+  "There are no open tickets." : "Nemate otvorenih tiketa.",
+  "There are {0} tickets." : "Ima {0} tiketa.",
+  "There is 1 ticket." : "Ima 1 tiket.",
+  "There are no tickets." : "Nema tiketa."
 }

@@ -1,5 +1,5 @@
 InterfaceName: 'status'
-Description: 'List Of Issues'
+Description: 'My Tickets'
 APIDoc: ''
 Interfaces: 'items,daterange,pagination'
 RequiredScopes: ''
