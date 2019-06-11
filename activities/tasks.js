@@ -14,18 +14,18 @@ module.exports = async function (activity) {
 
     activity.Response.Data.items = response.body.Data.items;
     let value = response.body.Data.count;
-    activity.Response.Data.title = T(activity, 'All Tickets');
+    activity.Response.Data.title = T(activity, 'All Tasks');
     activity.Response.Data.link = "";
-    activity.Response.Data.linkLabel = T(activity, 'All Tickets');
+    activity.Response.Data.linkLabel = T(activity, 'All Tasks');
     activity.Response.Data.actionable = value > 0;
 
     if (value > 0) {
       activity.Response.Data.value = value;
       activity.Response.Data.color = 'blue';
-      activity.Response.Data.description = value > 1 ? T(activity, "There are {0} tickets.", value)
-        : T(activity, "There is 1 ticket.");
+      activity.Response.Data.description = value > 1 ? T(activity, "There are {0} tasks.", value)
+        : T(activity, "There is 1 task.");
     } else {
-      activity.Response.Data.description = T(activity, 'There are no tickets.');
+      activity.Response.Data.description = T(activity, 'There are no tasks.');
     }
   } catch (error) {
     $.handleError(activity, error);

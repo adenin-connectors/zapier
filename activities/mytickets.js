@@ -7,7 +7,7 @@ module.exports = async function (activity) {
 
     const pagination = $.pagination(activity);
     const dateRange = $.dateRange(activity);
-    const response = await api(`/ticket/my?page=${pagination.page}&pageSize=${pagination.pageSize}` +
+    const response = await api(`/task/my?page=${pagination.page}&pageSize=${pagination.pageSize}` +
       `&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
 
     if ($.isErrorResponse(activity, response)) return;

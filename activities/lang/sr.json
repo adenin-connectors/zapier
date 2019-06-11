@@ -22,5 +22,17 @@
   "There are no open tickets." : "Nemate otvorenih tiketa.",
   "There are {0} tickets." : "Ima {0} tiketa.",
   "There is 1 ticket." : "Ima 1 tiket.",
-  "There are no tickets." : "Nema tiketa."
+  "There are no tickets." : "Nema tiketa.",
+  "Open Tasks": "Otvoreni Zadaci",
+  "All Tasks": "Svi Zadaci",
+  "My Tasks": "Moji Zadaci",
+  "You have {0} assigned tasks.": "Imate {0} dodeljena zadatka.",
+  "You have 1 assigned task.": "Imate 1 dodeljen zadatak.",
+  "You have no tasks assigned.": "Nemate dodeljenih zadataka.",
+  "There are {0} open tasks." : "Imate {0} otvorena zadatka.",
+  "There is 1 open task." : "Imate 1 otvoreni zadatak.",
+  "There are no open tasks." : "Nemate otvorenih zadataka.",
+  "There are {0} tasks." : "Ima {0} zadatka.",
+  "There is 1 tasks." : "Ima 1 zadatak.",
+  "There are no tasks." : "Nema zadataka."
 }
