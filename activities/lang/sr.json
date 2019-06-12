@@ -34,5 +34,13 @@
   "There are no open tasks." : "Nemate otvorenih zadataka.",
   "There are {0} tasks." : "Ima {0} zadatka.",
   "There is 1 tasks." : "Ima 1 zadatak.",
-  "There are no tasks." : "Nema zadataka."
+  "There are no tasks." : "Nema zadataka.",
+  "All Leads": "Svi Kontakti",
+  "My Leads": "Moji Kontakti",
+  "You have {0} assigned leads.": "Imate {0} dodeljena kontakta.",
+  "You have 1 assigned lead.": "Imate 1 dodeljen kontakt.",
+  "You have no leads assigned.": "Nemate dodeljenih kontakta.",
+  "There are {0} leads." : "Ima {0} kontakta.",
+  "There is 1 leads." : "Ima 1 kontakt.",
+  "There are no lead." : "Nema kontakta."
 }
