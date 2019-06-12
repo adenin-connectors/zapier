@@ -47,5 +47,15 @@
   "All News": "Sve Novosti",
   "You have {0} news.": "Imate {0} novosti.",
   "You have 1 news.": "Imate jednu novost",
-  "You have no news." : "Nemate novosti."
+  "You have no news." : "Nemate novosti.",
+  "My Events": "Moji Događaji",
+  "All Events": "Svi Događaji",
+  "You have {0} {1} today. The next event '{2}' starts {3}": "Imate {0} {1} danas. Sledeci događaj '{2}' počinje {3}",
+  "You have no events today.": "Nemate zakazane događaje danas.",
+  "event scheduled": "zakazan događaj",
+  "events scheduled": "zakazanih događaja",
+  "in {0} minutes.": "za {0} minuta.",
+  "tomorrow ": "sutra ",
+  "on ": "na ",
+  "at ": "u "
 }
