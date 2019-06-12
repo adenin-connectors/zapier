@@ -28,6 +28,7 @@ module.exports = async (activity) => {
       if (request.assignedTo.length > 0 || request.roles.length > 0) {
         // case 1: A collection "all" is returned with users and roles
         collections.push({ name: "all", users: request.assignedTo, roles: request.roles, date: date });
+
         if (request.openValue == true) {
 
           // case 2: When open == true we return collection “open”, with users and roles
@@ -40,6 +41,7 @@ module.exports = async (activity) => {
           } else {
             collections.push({ name: "my", users: [], roles: request.roles, date: date });
           }
+          
           if (request.dueDate) {
             let dueDate = new Date(request.dueDate).toISOString();
 

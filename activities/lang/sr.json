@@ -42,5 +42,10 @@
   "You have no leads assigned.": "Nemate dodeljenih kontakta.",
   "There are {0} leads." : "Ima {0} kontakta.",
   "There is 1 leads." : "Ima 1 kontakt.",
-  "There are no lead." : "Nema kontakta."
+  "There are no lead." : "Nema kontakta.",
+  "News Feed": "Novosti",
+  "All News": "Sve Novosti",
+  "You have {0} news.": "Imate {0} novosti.",
+  "You have 1 news.": "Imate jednu novost",
+  "You have no news." : "Nemate novosti."
 }
