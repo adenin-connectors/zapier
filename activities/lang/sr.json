@@ -57,5 +57,13 @@
   "in {0} minutes.": "za {0} minuta.",
   "tomorrow ": "sutra ",
   "on ": "na ",
-  "at ": "u "
+  "at ": "u ",
+  "My Approvals": "Moja Odobrenja",
+  "All Approvals": "Sva Odobrenja",
+  "You have {0} approvals.": "Imate {0} odobrenja.",
+  "You have 1 approval.": "Imate jedno odobrenje",
+  "You have no approvals." : "Nemate odobrenja.",
+  "There are {0} approvals." : "Ima {0} kontakta.",
+  "There is 1 leadapprovals." : "Ima 1 kontakt.",
+  "There are no approvals." : "Nema kontakta."
 }
