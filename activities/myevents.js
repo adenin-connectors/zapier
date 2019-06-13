@@ -6,7 +6,7 @@ module.exports = async function (activity) {
     api.initialize(activity);
 
     const pagination = $.pagination(activity);
-    const dateRange = $.dateRange(activity);
+    const dateRange = $.dateRange(activity,'today');
     const response = await api(`/event/my?page=${pagination.page}&pageSize=${pagination.pageSize}` +
       `&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
 
@@ -24,7 +24,7 @@ module.exports = async function (activity) {
 
       let eventFormatedTime = api.getEventFormatedTimeAsString(activity, nextEvent);
       let eventPluralorNot = value > 1 ? T(activity, "events scheduled") : T(activity, "event scheduled");
-      let description = T(activity, `You have {0} {1} today. The next event '{2}' starts {3}`, value, eventPluralorNot, nextEvent.summary, eventFormatedTime);
+      let description = T(activity, `You have {0} {1} today. The next event '{2}' starts {3}`, value, eventPluralorNot, nextEvent.title, eventFormatedTime);
 
       activity.Response.Data.value = value;
       activity.Response.Data.color = 'blue';

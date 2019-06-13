@@ -64,6 +64,11 @@
   "You have 1 approval.": "Imate jedno odobrenje",
   "You have no approvals." : "Nemate odobrenja.",
   "There are {0} approvals." : "Ima {0} kontakta.",
-  "There is 1 leadapprovals." : "Ima 1 kontakt.",
-  "There are no approvals." : "Nema kontakta."
+  "There is 1 approval." : "Ima 1 kontakt.",
+  "There are no approvals." : "Nema kontakta.",
+  "Documents": "Dokumenti",
+  "All Documents": "Svi Dokumenti",
+  "There are {0} documents." : "Ima {0} dokumenta.",
+  "There is 1 document." : "Ima 1 dokument.",
+  "There are no documents." : "Nema dokumentata."
 }
