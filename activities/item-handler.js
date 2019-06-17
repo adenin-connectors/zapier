@@ -11,49 +11,41 @@ module.exports = async (activity) => {
 
     if (activity.Request.Data._type == "validate_key") return;
 
-    const request = activity.Request.Data;
-    let entity = {};
+    const entity = activity.Request.Data;
+
     let collections = [];
-    if (request._type) {
-      let date = new Date(request.date).toISOString();
-      entity = {
-        _type: request._type,
-        id: "" + request.id,
-        title: request.title,
-        description: request.description,
-        date: date,
-        link: request.link
-      };
+    if (entity._type) {
+      let date = new Date(entity.date).toISOString();
 
-      if (request.assignedTo.length > 0 || request.roles.length > 0) {
+      if (entity.assignedTo.length > 0 || entity.roles.length > 0) {
         // case 1: A collection "all" is returned with users and roles
-        collections.push({ name: "all", users: request.assignedTo, roles: request.roles, date: date });
+        collections.push({ name: "all", users: entity.assignedTo, roles: entity.roles, date: date });
 
-        if (request.openValue == true) {
+        if (entity.openValue == true) {
 
           // case 2: When open == true we return collection “open”, with users and roles
-          collections.push({ name: "open", users: request.assignedTo, roles: request.roles, date: date });
+          collections.push({ name: "open", users: entity.assignedTo, roles: entity.roles, date: date });
 
           // case 3: When AssignedTo is not empty and open we return a collection “my”, with only users: AssignedTo
           // if assignedTo is empty we use roles instead
-          if (request.assignedTo.length > 0) {
-            collections.push({ name: "my", users: request.assignedTo, roles: [], date: date });
+          if (entity.assignedTo.length > 0) {
+            collections.push({ name: "my", users: entity.assignedTo, roles: [], date: date });
           } else {
-            collections.push({ name: "my", users: [], roles: request.roles, date: date });
+            collections.push({ name: "my", users: [], roles: entity.roles, date: date });
           }
           
-          if (request.dueDate) {
-            let dueDate = new Date(request.dueDate).toISOString();
+          if (entity.dueDate) {
+            let dueDate = new Date(entity.dueDate).toISOString();
 
             // case 4: When DueDate is provided and open we return a collection “due”, with users and roles; date = DueDate
-            collections.push({ name: "due", users: request.assignedTo, roles: request.roles, date: dueDate });
+            collections.push({ name: "due", users: entity.assignedTo, roles: entity.roles, date: dueDate });
 
             // case 5: When DueDate is provided and open we return a collection “my-due”, with only users: AssignedTo, date = DueDate
             // if assignedTo is empty we use roles
-            if (request.assignedTo.length > 1) {
-              collections.push({ name: "my-due", users: request.assignedTo, roles: [], date: dueDate });
+            if (entity.assignedTo.length > 1) {
+              collections.push({ name: "my-due", users: entity.assignedTo, roles: [], date: dueDate });
             } else {
-              collections.push({ name: "my-due", users: [], roles: request.roles, date: dueDate });
+              collections.push({ name: "my-due", users: [], roles: entity.roles, date: dueDate });
             }
           }
         }
