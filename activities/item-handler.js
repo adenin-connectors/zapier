@@ -56,5 +56,4 @@ module.exports = async (activity) => {
   } catch (error) {
     $.handleError(activity, error);
   }
-
 };
