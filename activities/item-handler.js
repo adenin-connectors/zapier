@@ -56,6 +56,9 @@ module.exports = async (activity) => {
 
     let date = new Date(entity.date).toISOString();
 
+    if (!entity.assignedTo) entity.assignedTo = []; // if there is no assignedto object create empty to avoid errors later
+    if (!entity.roles) entity.roles = []; // if there is no roles object create empty to avoid errors later
+
     if (entity.assignedTo.length > 0 || entity.roles.length > 0) {
       // case 1: A collection "all" is returned with users and roles
       collections.push({ name: "all", users: entity.assignedTo, roles: entity.roles, date: date });

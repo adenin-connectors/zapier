@@ -70,5 +70,15 @@
   "All Documents": "Svi Dokumenti",
   "There are {0} documents." : "Ima {0} dokumenta.",
   "There is 1 document." : "Ima 1 dokument.",
-  "There are no documents." : "Nema dokumentata."
+  "There are no documents." : "Nema dokumentata.",
+  "My Alerts": "Moja Obaveštenja",
+  "All Alerts": "Sva Obaveštenja",
+  "You have {0} alerts.": "Imate {0} obaveštenja.",
+  "You have 1 alert.": "Imate jedno obaveštenje.",
+  "You have no alerts." : "Nemate obaveštenja.",
+  "My Announcements": "Moje Najave",
+  "All Announcements": "Sve objave",
+  "You have {0} announcements.": "Imate {0} objave.",
+  "You have 1 announcement.": "Imate jednu objavu.",
+  "You have no announcements." : "Nemate objave."
 }
