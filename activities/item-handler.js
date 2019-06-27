@@ -1,8 +1,7 @@
 'use strict';
 module.exports = async (activity) => {
   try {
-    if (!activity.Context.connector.custom1 || (activity.Context.connector.custom1 != activity.Request.Headers["X-Apikey"])) {
-      logger.error('403', activity.Context.connector, activity.Request.Headers);
+    if (!activity.Context.connector.custom1 || (activity.Context.connector.custom1 != activity.Request.Headers["x-apikey"])) {
       activity.Response.ErrorCode = 403;
       activity.Response.Data = {
         ErrorText: "invalid X-APIKEY"
