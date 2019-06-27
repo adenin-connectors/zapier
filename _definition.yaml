@@ -15,8 +15,8 @@ ServiceUrlHint: ''
 XML2JSON: hide
 ImpersonateOAuth: hide
 Interface: hide
-Custom1: optional
-Custom1Label: Webhook Secret Token
+Custom1: required
+Custom1Label: Cluster Key
 Custom1Hint: ''
 Custom2: required
 Custom2Label: Endpoint URL

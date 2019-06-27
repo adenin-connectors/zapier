@@ -1,7 +1,7 @@
 'use strict';
 module.exports = async (activity) => {
   try {
-    if (!activity.Context.connector.custom1 || (activity.Context.connector.custom1 != activity.Request.Headers["X-Apikey"])) {
+    if (!activity.Context.connector.apikey || (activity.Context.connector.apikey != activity.Request.Headers["X-Apikey"])) {
       activity.Response.ErrorCode = 403;
       activity.Response.Data = {
         ErrorText: "invalid X-APIKEY"
@@ -63,7 +63,7 @@ module.exports = async (activity) => {
       // case 1: A collection "all" is returned with users and roles
       collections.push({ name: "all", users: entity.assignedTo, roles: entity.roles, date: date });
 
-      if (entity.openValue == true) {
+      if (entity.openvalue === undefined || entity.openValue === true) {
 
         // case 2: When open == true we return collection “open”, with users and roles
         collections.push({ name: "open", users: entity.assignedTo, roles: entity.roles, date: date });
