@@ -8,7 +8,7 @@ module.exports = async function (activity) {
     const pagination = $.pagination(activity);
     const dateRange = $.dateRange(activity);
 
-    const response = await api(`/ticket/open?page=${pagination.page}&pageSize=${pagination.pageSize}&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
+    const response = await api(`/ticket/all?page=${pagination.page}&pageSize=${pagination.pageSize}&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
 
     if ($.isErrorResponse(activity, response)) return;
 
@@ -26,16 +26,16 @@ module.exports = async function (activity) {
     activity.Response.Data.items = items;
 
     if (parseInt(pagination.page) === 1) {
-      activity.Response.Data.title = T(activity, 'Open Tickets');
+      activity.Response.Data.title = T(activity, 'All Tickets');
       activity.Response.Data.actionable = count > 0;
 
       if (count > 0) {
         activity.Response.Data.value = count;
         activity.Response.Data.date = activity.Response.Data.items[0].date;
         activity.Response.Data.color = 'blue';
-        activity.Response.Data.description = count > 1 ? T(activity, 'There are {0} open tickets.', count) : T(activity, 'There is 1 open ticket.');
+        activity.Response.Data.description = count > 1 ? T(activity, 'There are {0} new tickets.', count) : T(activity, 'There is 1 new ticket.');
       } else {
-        activity.Response.Data.description = T(activity, 'There are no open tickets.');
+        activity.Response.Data.description = T(activity, 'There are no new tickets.');
       }
     }
   } catch (error) {
