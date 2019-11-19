@@ -9,7 +9,7 @@ module.exports = async (activity) => {
     const pagination = $.pagination(activity);
     const dateRange = $.dateRange(activity);
 
-    const response = await api(`/lead/new?page=${pagination.page}&pageSize=${pagination.pageSize}&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
+    const response = await api(`/lead/all?page=${pagination.page}&pageSize=${pagination.pageSize}&startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`);
 
     if ($.isErrorResponse(activity, response)) return;
 
