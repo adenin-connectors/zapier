@@ -13,27 +13,19 @@ module.exports = async function (activity) {
     if ($.isErrorResponse(activity, response)) return;
 
     const items = response.body.Data.items;
-
-    let count = 0;
-    let readDate = (new Date(new Date().setDate(new Date().getDate() - 30))).toISOString(); // default read date 30 days in the past
-
-    if (activity.Request.Query.readDate) readDate = activity.Request.Query.readDate;
-
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].date > readDate) count++;
-    }
+    const value = items.length;
 
     activity.Response.Data.items = items;
 
     if (parseInt(pagination.page) === 1) {
       activity.Response.Data.title = T(activity, 'Open Tickets');
-      activity.Response.Data.actionable = count > 0;
+      activity.Response.Data.actionable = value > 0;
 
-      if (count > 0) {
-        activity.Response.Data.value = count;
+      if (value > 0) {
+        activity.Response.Data.value = value;
         activity.Response.Data.date = activity.Response.Data.items[0].date;
         activity.Response.Data.color = 'blue';
-        activity.Response.Data.description = count > 1 ? T(activity, 'There are {0} open tickets.', count) : T(activity, 'There is 1 open ticket.');
+        activity.Response.Data.description = value > 1 ? T(activity, 'There are {0} open tickets.', value) : T(activity, 'There is 1 open ticket.');
       } else {
         activity.Response.Data.description = T(activity, 'There are no open tickets.');
       }
