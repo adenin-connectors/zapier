@@ -28,12 +28,13 @@ module.exports = async function (activity) {
     if (parseInt(pagination.page) === 1) {
       activity.Response.Data.title = T(activity, 'All Tickets');
       activity.Response.Data.actionable = count > 0;
+      activity.Response.Data.thumbnail = 'https://www.adenin.com/assets/images/wp-images/logo/zapier.svg';
 
       if (count > 0) {
         activity.Response.Data.value = count;
         activity.Response.Data.date = activity.Response.Data.items[0].date;
-        activity.Response.Data.color = 'blue';
         activity.Response.Data.description = count > 1 ? T(activity, 'There are {0} new tickets.', count) : T(activity, 'There is 1 new ticket.');
+        activity.Response.Data.briefing = activity.Response.Data.description + ' The latest is <b>' + items[0].title + '</b>';
       } else {
         activity.Response.Data.description = T(activity, 'There are no new tickets.');
       }
